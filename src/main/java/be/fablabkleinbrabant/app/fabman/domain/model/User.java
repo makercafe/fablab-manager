@@ -29,25 +29,41 @@ public class User implements Serializable {
 	@Id
     private String id;
 	
+	@Column
 	private String firstName;
-	private String lastName;
 	
- 
+	@Column
+	private String lastName;
+	 
     @Column(name = "userName", unique = true)
 	private String userName;
+	
+	@Column
     private String password;
+	
+	@Column
  	private String email;
 
 	@OneToOne(mappedBy = "user", fetch = FetchType.LAZY, cascade = { CascadeType.ALL })
 	private SecurityCode securityCode;
+	
+	@Column
 	private boolean accountExpired;
+	
+	@Column
 	private boolean accountLocked;
+	
+	@Column
 	private boolean enabled;
 
 	@OneToOne(mappedBy = "user", cascade = { CascadeType.ALL })
 	private Role role;
+	
+	@Column
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")  	
 	private DateTime createDate;
+	
+	@Column
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")  
 	private DateTime updateDate;
 

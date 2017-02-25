@@ -39,8 +39,11 @@ public class Membership implements Serializable {/**
 	@OneToMany(mappedBy = "membership", cascade = { CascadeType.ALL })
 	private List<MembershipPeriod> membershipPeriods; 
 		
+	@Column
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")  	
 	private DateTime createDate;
+
+	@Column
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")  
 	private DateTime updateDate;
 

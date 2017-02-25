@@ -4,12 +4,12 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
-import be.fablabkleinbrabant.app.fabman.domain.model.EidData;
+import be.fablabkleinbrabant.app.fabman.domain.model.CardData;
 
 
 @Repository
 @RepositoryRestResource()
-public interface EidDataRepository extends CrudRepository<EidData, String> {
+public interface CardDataRepository extends CrudRepository<CardData, String> {
 	
 
 }

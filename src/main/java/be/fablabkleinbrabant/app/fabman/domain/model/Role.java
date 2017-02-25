@@ -30,6 +30,8 @@ public class Role implements Serializable  {
 
     @OneToOne
     private User user;
+    
+    @Column
     private Integer role;
 
  

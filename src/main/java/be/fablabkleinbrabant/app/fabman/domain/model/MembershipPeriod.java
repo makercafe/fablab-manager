@@ -54,13 +54,19 @@ public class MembershipPeriod implements Serializable {/**
 	@Column
 	private String PaymentReference;
 	
+	@Column
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")  	
 	private DateTime fromDate;
+	
+	@Column
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")  
 	private DateTime untilDate;
 		
+	@Column
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")  	
 	private DateTime createDate;
+	
+	@Column
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")  
 	private DateTime updateDate;
 }

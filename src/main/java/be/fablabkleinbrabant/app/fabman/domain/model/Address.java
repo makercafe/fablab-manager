@@ -31,25 +31,38 @@ public class Address implements Serializable  {
 	
 	@Column(nullable=false,columnDefinition = "VARCHAR(128)")
 	private String adress1;
+	
 	@Column(columnDefinition = "VARCHAR(128)")	
 	private String adress2;
+	
 	@Column(nullable=false,columnDefinition = "VARCHAR(12)")
 	private String postcode;
+	
 	@Column(nullable=false,columnDefinition = "VARCHAR(64)")
 	private String city;
+	
 	@Column(nullable=true,columnDefinition = "VARCHAR(32)")
 	private String country;
+	
 	@Column(nullable=true,columnDefinition = "VARCHAR(32)")
 	private String phone;
+	
 	@Column(nullable=true,columnDefinition = "VARCHAR(32)")
 	private String mobilePhone;
+	
 	@Column(nullable=true,columnDefinition = "VARCHAR(32)")
 	private String vatNumber;
+	
+	@Column
 	private Boolean deleted;
+
+	@Column
 	private Boolean activated;
+	
 	@Column(nullable=false)
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")    
 	private DateTime createDate;
+	
 	@Column(nullable=false)
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")    
 	private DateTime updateDate;

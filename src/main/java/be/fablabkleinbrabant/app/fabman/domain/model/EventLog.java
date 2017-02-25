@@ -35,12 +35,16 @@ public class EventLog implements Serializable {/**
 	@OneToOne
 	private Member member;
 	
+	@Column
 	private String type;
 	
+	@Column
 	private String action;
 	
+	@Column
 	private String extraInfo;
 	
+	@Column
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")  	
 	private DateTime logDate;
 }

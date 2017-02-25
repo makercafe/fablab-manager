@@ -33,9 +33,15 @@ public class SecurityCode  implements Serializable  {
 	
     @OneToOne
     private User user;
+    
+    @Column
     private String code;
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")    
+
+	@Column
     private DateTime timeRequest;
+    
+	@Column
     private TypeActivationEnum typeActivationEnum;
 
   
